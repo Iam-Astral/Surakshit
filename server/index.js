@@ -66,4 +66,4 @@ app.post('/api/ask', async (req, res) => {
   } catch (err) { res.status(500).json({ error: err?.message || 'Gemini question failed.' }); }
 });
 
-app.listen(process.env.PORT || 5000, () => console.log(`Surakshit API running on http://localhost:${process.env.PORT || 5000}`));
+export default app;
