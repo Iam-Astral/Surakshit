@@ -8,10 +8,7 @@ import fs from 'node:fs/promises';
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: [
-    'https://surakshit-web.vercel.app',
-    'http://localhost:5173'
-  ],
+  origin: true,
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
   credentials: false
