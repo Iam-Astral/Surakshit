@@ -1,0 +1,1 @@
+{"name":"surakshit-server","type":"module","scripts":{"dev":"node --watch index.js","start":"node index.js"},"dependencies":{"@google/genai":"latest","cors":"latest","dotenv":"latest","express":"latest","multer":"latest"}}
