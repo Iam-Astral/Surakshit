@@ -7,7 +7,15 @@ import fs from 'node:fs/promises';
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://surakshit-web.vercel.app',
+    'http://localhost:5173'
+  ],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  credentials: false
+}));
 app.use(express.json({ limit: '2mb' }));
 const upload = multer({ dest: '/tmp/uploads/', limits: { fileSize: 20 * 1024 * 1024 } });
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
