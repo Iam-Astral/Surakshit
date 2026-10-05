@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import {Upload, FileText, Sparkles, ShieldCheck, UserRound, Stethoscope, Send, Share2, Activity, ChevronRight} from 'lucide-react';
 import './style.css';
 
-const API='http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 const demoReport={documentType:'Sample Medical Report',date:'',summary:'Upload a PDF to generate a real Gemini-powered summary.',conditions:[],medications:[],findings:[],importantObservations:[],questionsForDoctor:[]};
 
 function App(){
